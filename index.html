@@ -11,47 +11,74 @@
     <div class="news-ticker">
         عاجل: مركز تنمية القدرات الصيفي يطلق منصته الرقمية التفاعلية لتغطية فعاليات الصحافة...
     </div>
-    <header style="text-align: center !important; padding: 50px 20px !important; background: linear-gradient(135deg, #f1f5f9, #e2e8f0) !important; border-bottom: 3px solid #1e293b !important; margin-bottom: 30px !important;">
-    <h1 style="font-size: 3rem !important; color: #1e293b !important; margin-bottom: 10px !important; font-family: sans-serif !important;">جريدة المركز</h1>
-    <p style="font-size: 1.2rem !important; color: #475569 !important;">صوت التنمية والصحافة الرقمية</p>
+    <header>
+    <h1>مجلة المركز الصحفي</h1>
+    <p>صوت التنمية والصحافة الرقمية</p>
+    
+    <!-- معلومات رئيسة التحرير -->
+    <div class="author-info" style="margin-top: 15px; color: #94a3b8; font-family: 'Cairo', sans-serif;">
+        <p><strong>رئيسة التحرير:</strong> ريتال أشرف</p>
+        <p>محافظة مطروح</p>
+    </div>
 </header>
 
     <main class="newspaper-layout" style="display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; width: 100% !important; max-width: 800px !important; margin: 0 auto !important; padding: 0 20px !important; box-sizing: border-box !important;">
         <section class="main-news">
+<section class="main-news">
+    
+    <div class="podcast-section">
+    <h3>🎙️ البودكاست</h3>
+    <div class="podcast-box">
+        <video width="100%" controls>
+            <source src="boodcast.mp4" type="video/mp4">
+            عذراً، متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    </div>
+</div>
 
-            <div class="podcast-section">
-                <h3>🎙️ استمع إلى حلقة البودكاست الصحفي</h3>
-                <div class="podcast-box">
-                    <img src="" alt="ميكروفون">
-                    <div>
-                    <audio controls>
-                    <source src="" type="audio/mpeg">
-                    </audio>
-                </div>
-            </div>
-        </section>
+    <div class="interview-section">
+        <h3>📝 حوار صحفي</h3>
+        <div class="interview-box">
+            <p>أستاذه صفاء المعناوي موجه عام الصحافة</p>
+            <audio controls>
+                <source src="misssafaa.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+
+</section>
+            
+            >
 
         <aside class="cards-container" style="display: flex !important; flex-direction: column !important; gap: 25px !important; width: 100% !important;">
                 <div class="side-card">
-                <video src=".mp4"  control width= '100%' alt="كاريكاتير"></video>
+                 <video width="100%" controls>
+            <source src="karekater.mp4" type="video/mp4">
+        </video>
                 <h3>رأي ساخر: كاريكاتير الأسبوع</h3>
                 <span class="side-meta">أحاديث صحفية</span>
             </div>
 
-            <div class="side-card">
-                <img src="" alt="لقاء صحفي">
-                <h3>أحاديث صحفية: لقاء مع رئيس التحرير</h3>
-                <span class="side-meta">مقالات وتقارير</span>
-            </div>
+            <!-- قسم الأحاديث الصحفية -->
+<div class="interview-section">
+    <h3>🎥أحاديث صحفيه :لقاء مع مدير مجمع خيرالله فضل</h3>
+    <video width="100%" controls>
+        <source src="interview.mp4" type="video/mp4">
+    </video>
+</div>
 
-            <div class="side-card">
-                <img src="" alt="إصدارات">
-                <h3>إصدارات مجلة المركز الدورية</h3>
-                <span class="side-meta">المجلات والمطبوعات</span>
-            </div>
-    <button id="like-btn" onclick="handleLike()" style="padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-family: 'Cairo'; font-weight: bold; margin-top: 15px;">❤️ إعجاب</button>
-<span style="color: #ffffff; margin-right: 10px;">عدد الإعجابات: <span id="likes-count">120</span></span>
-    </main>
+<!-- قسم ورشة العمل -->
+<div class="side-card">
+    <h3>📺 ورشة عمل النشرة الإخبارية</h3>
+    <video width="100%" controls>
+        <source src="" type="video/mp4">
+    </video>
+<button id="like-btn" onclick="handleLike()" style="padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-family: 'Cairo'; font-weight: bold; margin-top: 15px; background-color: #e0e0e0; color: #333;">
+    ❤️ إعجاب
+</button>
+<span style="color: #1e293b; margin-right: 10px; font-weight: bold;">
+    عدد الإعجابات: <span id="likes-count">120</span>
+</span>
 
     <footer>
         <p>جميع الحقوق محفوظة - مركز تنمية القدرات الصحفية 2026</p>

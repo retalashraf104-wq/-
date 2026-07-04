@@ -1,35 +1,65 @@
 // ==========================================
-// 1. ميزة الوضع الليلي (Dark Mode)
+// 1. ميزة الوضع الليلي (معطلة حالياً بناءً على طلبك)
 // ==========================================
-// الكود التلقائي: يقرأ وقت الجهاز ويشغل الوضع الليلي فوراً إذا كنا بالليل
-const hour = new Date().getHours();
-if (hour >= 18 || hour < 6) {
-    document.body.classList.add('dark-mode');
-} else {
-    document.body.classList.remove('dark-mode');
-}
+// const hour = new Date().getHours();
+// if (hour >= 18 || hour < 6) { document.body.classList.add('dark-mode'); }
+
 // ==========================================
-// 2. ميزة عداد الإعجابات (Like Button)
+// 2. ميزة عداد الإعجابات
 // ==========================================
-let likesCount = 120; // عدد الإعجابات الافتراضي للمقال
+let likesCount = 120; 
 
 function handleLike() {
     const likeBtn = document.getElementById('like-btn');
     const countSpan = document.getElementById('likes-count');
     
-    // التحقق لو القارئ ضغط لايك مسبقاً أم لا عبر كلاس نشط (active)
     if (likeBtn.classList.contains('liked')) {
-        likesCount--; // إلغاء الإعجاب
+        likesCount--;
         likeBtn.classList.remove('liked');
         likeBtn.style.backgroundColor = "#e0e0e0";
         likeBtn.style.color = "#333";
     } else {
-        likesCount++; // إضافة إعجاب
+        likesCount++;
         likeBtn.classList.add('liked');
-        likeBtn.style.backgroundColor = "#b30000"; // لون أحمر صحفي عند الإعجاب
+        likeBtn.style.backgroundColor = "#b30000";
         likeBtn.style.color = "#fff";
     }
-    
-    // تحديث الرقم الظاهر على الشاشة
     countSpan.innerText = likesCount;
 }
+// ==========================================
+// ميزة عداد الإعجابات (Like Button)
+// ==========================================
+
+// نجلب الرقم القديم من ذاكرة المتصفح لو موجود، وإلا نبدأ من 120
+// نستخدم DOMContentLoaded لضمان أن الزر موجود قبل محاولة التحكم فيه
+document.addEventListener('DOMContentLoaded', () => {
+    const likeBtn = document.getElementById('like-btn');
+    const countSpan = document.getElementById('likes-count');
+
+    // تحميل الرقم المحفوظ
+    let likesCount = parseInt(localStorage.getItem('savedLikes')) || 120;
+    if (countSpan) {
+        countSpan.innerText = likesCount;
+    }
+
+    // ربط الوظيفة بالزر
+    if (likeBtn) {
+        likeBtn.onclick = function() {
+            if (likeBtn.classList.contains('liked')) {
+                likesCount--;
+                likeBtn.classList.remove('liked');
+                likeBtn.style.backgroundColor = "#e0e0e0";
+                likeBtn.style.color = "#333";
+            } else {
+                likesCount++;
+                likeBtn.classList.add('liked');
+                likeBtn.style.backgroundColor = "#b30000";
+                likeBtn.style.color = "#fff";
+            }
+            if (countSpan) {
+                countSpan.innerText = likesCount;
+                localStorage.setItem('savedLikes', likesCount);
+            }
+        };
+    }
+});
