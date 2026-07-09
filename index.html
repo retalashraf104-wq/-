@@ -2,72 +2,96 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مجلة مركز تنمية القدرات الصيفي للصحافة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>مجلة مركز تنميه القدرات الصيفي للصحافه</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* تنسيق إضافي بسيط للزرار عشان يظهر بشكل كويس */
+        .like-container { margin: 20px 0; text-align: center; }
+        #like-btn { padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-family: 'Cairo'; font-weight: bold; background-color: #e0e0e0; color: #333; }
+    </style>
 </head>
 <body>
 
+    <div class="news-ticker">
+        عاجل: مركز تنمية القدرات الصيفي يطلق منصته الرقمية التفاعلية لتغطية فعاليات الصحافة...
+    </div>
+
     <header>
-        <h1>مجلة مركز تنمية القدرات الصيفي للصحافة</h1>
-        <p style="font-size: 1.2rem; color: #64748b;">منصة الصحافة الرقمية التفاعلية</p>
-        <div class="author-info" style="margin-top: 15px;">
-            <p><strong>رئيسة التحرير: ريتال أشرف</strong></p>
-            <p>محافظة مطروح</p>
+        <h1>مجلة المركز الصحفي</h1>
+        <p>صوت التنمية والصحافة الرقمية</p>
+        
+        <div class="author-info" style="margin-top: 15px; color: #94a3b8; font-family: 'Cairo', sans-serif;">
+            <p><strong>رئيسة التحرير:</strong> ريتال أشرف</p>
+            <p>محافظه مطروح</p>
         </div>
     </header>
 
-    <main class="newspaper-layout">
+    <main class="newspaper-layout" style="display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; width: 100% !important; max-width: 800px !important; margin: 0 auto !important; padding: 0 20px !important; box-sizing: border-box !important;">
         
-        <!-- قسم البودكاست -->
-        <section class="podcast-section">
-            <h3>🎙️ البودكاست</h3>
-            <iframe src="https://www.youtube.com/embed/_VeKg4bBdr4" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
-        </section>
-
-        <!-- قسم الحوار الصوتي -->
-        <section class="interview-section">
-            <h3>📝 حوار صحفي</h3>
-            <p>أستاذة صفاء المعناوي - موجه عام الصحافة</p>
-            <audio controls>
-                <source src="misssafaa.mp3" type="audio/mpeg">
-            </audio>
-        </section>
-
-        <!-- قسم الكاريكاتير -->
-        <!-- قسم الكاريكاتير - تم تعديله ليظهر كقسم مستقل -->
-<section class="caricature-section" style="margin-top: 30px; width: 100%;">
-    <h3>🎨 كاريكاتير العدد</h3>
-    <div class="side-card">
-        <iframe 
-            src="https://www.youtube.com/embed/YCv50-sZ1Dg" 
-            width="100%" 
-            height="315" 
-            frameborder="0" 
-            allowfullscreen>
-        </iframe>
-        <span class="side-meta">كاريكاتير</span>
-    </div>
-</section>
-
-        <!-- قسم الأحاديث الصحفية -->
-        <aside class="cards-container">
-            <div class="side-card">
-                <h3>🎥 لقاء مع مدير مجمع خيرالله فضل</h3>
-                <iframe src="https://www.youtube.com/embed/iB8z6TUi9Ts" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
+        <section class="main-news">
+            <div class="podcast-section">
+                <h3>🎙️ البودكاست</h3>
+                <div class="podcast-box">
+                    <iframe src="https://www.youtube.com/embed/_VeKg4bBdr4" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
             </div>
+
+            <div class="interview-section">
+                <h3>📝 حوار صحفي</h3>
+                <div class="interview-box">
+                    <p>أستاذه صفاء المعناوي موجه عام الصحافة</p>
+                    <audio controls>
+                        <source src="misssafaa.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+        </section>
+
+        <aside class="cards-container" style="display: flex !important; flex-direction: column !important; gap: 25px !important; width: 100% !important;">
+            
+            <div class="side-card">
+                <h3>🎨 كاريكاتير</h3>
+                <iframe src="https://www.youtube.com/embed/YCv50-sZ1Dg" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div class="interview-section">
+                <h3>🎥 أحاديث صحفيه : لقاء مع مدير مجمع خيرالله فضل</h3>
+                <div class="side-card">
+                    <iframe src="https://www.youtube.com/embed/iB8z6TUi9Ts" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                    <span class="side-meta">أحاديث صحفية</span>
+                </div>
+            </div>
+
             <div class="side-card">
                 <h3>📺 ورشة عمل النشرة الإخبارية</h3>
                 <iframe src="https://www.youtube.com/embed/_J-fQ6MZV5M" width="100%" height="315" frameborder="0" allowfullscreen></iframe>
             </div>
-        </aside>
 
+            <!-- زر الإعجاب -->
+            <div class="like-container">
+                <button id="like-btn" onclick="handleLike()">❤️ إعجاب</button>
+                <span style="color: #1e293b; margin-right: 10px; font-weight: bold;">
+                    عدد الإعجابات: <span id="likes-count">120</span>
+                </span>
+            </div>
+        </aside>
     </main>
 
     <footer>
         <p>جميع الحقوق محفوظة - مركز تنمية القدرات الصحفية 2026</p>
     </footer>
 
-    <script src="main.js"></script>
+    <script>
+        function handleLike() {
+            let countSpan = document.getElementById('likes-count');
+            let currentLikes = parseInt(countSpan.innerText);
+            countSpan.innerText = currentLikes + 1;
+        }
+
+        const hour = new Date().getHours();
+        if (hour >= 18 || hour < 6) {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>
