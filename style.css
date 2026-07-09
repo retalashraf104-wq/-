@@ -1,43 +1,38 @@
-/* ========================================== */
-/* الإعدادات العامة للموقع (أبيض ثابت) */
-/* ========================================== */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght=700&family=Cairo:wght=400;700&display=swap');
-
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
-    font-family: 'Cairo', sans-serif;
-    background-color: #ffffff !important; /* خلفية بيضاء ثابتة */
-    color: #1e293b !important; /* خط داكن للقراءة المريحة */
-    line-height: 1.6;
-    padding: 20px;
+    font-family: 'Cairo', sans-serif !important;
+    background-color: #ffffff !important;
+    color: #1e293b !important;
 }
 
-header { text-align: center; padding: 40px 0; border-bottom: 2px solid #e2e8f0; margin-bottom: 40px; }
-header h1 { font-family: 'Playfair Display', serif; font-size: 3rem; color: #1e293b !important; }
-
-/* تنسيق الكروت (أبيض رمادي فاتح) */
-/* تنسيق الكروت العام سيبيه زي ما هو */
-.podcast-section, .interview-section {
-    background-color: #f8fafc !important;
-    padding: 25px !important;
-    /* باقي التنسيقات القديمة... */
-}
-
-/* التنسيق الجديد الخاص بالكارت بتاع الفيديو بس */
-.side-card {
-    background-color: #f8fafc !important;
-    padding: 25px !important;
-    display: flex; /* هنفعل الفليكس هنا */
-    flex-direction: column; /* وده اللي هيخلي الفيديو والكلام تحت بعض */
-    align-items: center; /* عشان يبقوا في النص */
+header {
     text-align: center;
-    border-radius: 12px !important;
-    margin-bottom: 25px !important;
+    padding: 60px 20px;
+    background: #f8fafc;
+    border-bottom: 5px solid #3b82f6;
 }
 
-h3 { color: #1e293b !important; margin-bottom: 15px; }
+header h1 {
+    font-size: 3.5rem !important;
+    font-weight: 900 !important;
+    color: #0f172a !important;
+}
 
-video { width: 100%; margin-top: 15px; border-radius: 8px; border: 1px solid #cbd5e1; }
+.author-info strong {
+    font-size: 1.5rem !important;
+    color: #3b82f6 !important;
+}
 
-.author-info { border-top: 1px solid #e2e8f0; padding-top: 10px; font-size: 1rem; color: #64748b; }
+h3 {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    color: #1e293b !important;
+    margin: 20px 0;
+}
+
+.side-card {
+    border: 2px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
